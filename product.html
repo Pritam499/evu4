@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="product-title"></h1>
+        <nav>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Signup</a>
+            <a href="cart.html">Cart (<span id="cart-count">0</span>)</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="image-slider" id="product-images">
+            <img id="current-image" src="" alt="Product Image" style="width: 400px; height: 300px;">
+            <!-- <div>
+                <button id="prev-image" onclick="prevImage()">Previous</button>
+                <button id="next-image" onclick="nextImage()">Next</button>
+            </div> -->
+        </div>
+
+        <p id="product-description"></p>
+        <p id="product-price"></p>
+        <p id="product-strike-price"></p>
+        <ul>
+            <li>Available Quantity: <span id="product-quantity"></span></li>
+            <li>Category: <span id="product-category"></span></li>
+            <li>Average Rating: <span id="average-rating"></span></li>
+        </ul>
+
+        <button id="add-to-cart" onclick="addToCart()">Add to Cart</button>
+
+        <h2>User Reviews</h2>
+        <div id="reviews"></div>
+
+        <h2>Submit a Review</h2>
+        <form id="review-form" onsubmit="submitReview(event)">
+            <label for="review-rating">Rating (1-5):</label>
+            <input type="number" id="review-rating" min="1" max="5" required>
+            <label for="review-text">Review:</label>
+            <textarea id="review-text" required></textarea>
+            <button type="submit">Submit Review</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Product Showcase</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="product.js"></script>
+</body>
+</html>

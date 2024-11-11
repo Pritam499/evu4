@@ -1,0 +1,162 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(15, 77, 132);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    margin-top: 0;
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+.image-slider h2 {
+    margin-bottom: 10px; /* Reduced margin */
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Product container using Flexbox */
+#product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center; /* Distribute space between products */
+}
+
+/* Basic styling for the product card */
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 15px;
+    width: 100%; /* Full width on small screens */
+    max-width: 300px; /* Limit max width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Product image container */
+.product-image {
+    /* grid-row: 1 / 2; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.product-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+/* Product details */
+.product-details {
+    grid-row: 2 / 3;
+    padding: 10px;
+}
+
+.product-details h2 {
+    font-size: 1.2em;
+    margin-bottom: 8px; /* Adjust margin to reduce spacing */
+}
+
+.product-details p {
+    margin: 5px 0;
+}
+
+.product-details .price {
+    font-weight: bold;
+}
+
+.product-details .strike-price {
+    text-decoration: line-through;
+    color: #888;
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+/* Responsive design using media queries */
+@media (min-width: 600px) {
+    .product-card {
+        width: 45%; /* Two products per row on small tablets */
+    }
+}
+
+@media (min-width: 900px) {
+    .product-card {
+        width: 30%; /* Three products per row on larger tablets or small desktops */
+    }
+}
+
+@media (min-width: 1200px) {
+    .product-card {
+        width: 22%; /* Four products per row on large desktops */
+    }
+}
+
+.image-slider img {
+    width: 100%; /* Make image take full width */
+    height: auto; /* Maintain aspect ratio */
+    max-height: 300px; /* Limit max height to 300px */
+    object-fit: cover; /* Cover the area without stretching */
+}
+#login-form, #signup-form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1.5rem .8rem;
+}
+
+#login-form label, #login-form input, #signup-form label, #signup-form input{
+    margin-bottom: 0.5rem;
+    padding: 10px 0;
+}
+
+.image-slider button{
+    display: none;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgb(15, 77, 132);
+    color: white;
+    text-align: center;
+ }
+
+ .ls-container{
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+ }

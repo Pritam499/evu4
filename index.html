@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title></title>
+</head>
+
+<body>
+    <nav>
+        <div class="left">
+            <ul>
+                <li class="heading">E-commerce Site</li>
+                <li><a href="signup.html">Sign Up</a></li>
+            </ul>
+        </div>
+        <div class="search">
+            <input type="search" id="search" oninput="debouncing()" placeholder="Search your favourite items here.....">
+            <ul id="suggestions"></ul>
+        </div>
+        <div class="right">
+            <button style="background-color: rgb(173, 0, 52); color: black"><a href="login.html">Login</a></button>
+        </div>
+    </nav>
+    <div class="sorting">
+        <div class="discount">
+            <p class="dis"></p>
+        </div>
+        <label for="category_sort">Category:-</label>
+        <select name="" id="category_sort">
+            <option value="">Select Category</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Wearables">Wearables</option>
+            <option value="Home & Kitchen">Home & Kitchen</option>
+            <option value="Furniture">Furniture</option>
+            <option value="Cameras">Cameras</option>
+            <option value="Home Appliances">Home Appliances</option>
+        </select>
+        <label for="category_sort">Price:-</label>
+        <select name="" id="price_sort">
+            <option value="">Select value</option>
+            <option value="htl">High to Low</option>
+            <option value="lth">Low to High</option>
+
+        </select>
+    </div>
+    <div class="parent_div">
+
+    </div>
+    <footer>
+        <p>&copy; 2024 Product Showcase</p>
+    </footer>
+</body>
+
+</html>
+<script src="script.js"></script>

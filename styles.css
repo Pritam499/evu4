@@ -1,0 +1,239 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: white;
+}
+
+nav .left ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    
+}
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+ }
+element.style {
+    color: white !important;
+}
+
+nav .left li {
+    margin-right: 20px;
+    color: white !important;
+    
+}
+nav .left li a{
+    color: #fff;
+    text-decoration: none;
+    
+}
+
+nav .left .heading {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+nav .search {
+    flex-grow: 1;
+    position: relative;
+}
+
+nav .search input {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+nav .search input:focus {
+    outline: none;
+    border-color: #0066cc;
+}
+
+nav .search ul {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 9999;
+}
+
+nav .search ul li {
+    padding: 10px;
+    cursor: pointer;
+    background-color: black;
+}
+nav .search ul li:hover {
+    background-color: #f1f1f1;
+}
+
+nav .right button {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+nav .right button a {
+    color: white;
+    text-decoration: none;
+}
+
+nav .right button:hover {
+    background-color: #005bb5;
+}
+
+/* Sorting Section */
+.sorting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.sorting label {
+    font-size: 1rem;
+    margin-right: 10px;
+}
+
+.sorting select {
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Products Display */
+.parent_div {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.child_div {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.child_div:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.child_div img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.child_div .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.child_div .desc {
+    font-size: 1rem;
+    color: #555;
+    margin: 10px 0;
+}
+
+.child_div .price {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.child_div .st_price {
+    font-size: 0.9rem;
+    text-decoration: line-through;
+    color: #888;
+}
+
+.child_div .qty, .child_div .category {
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+.child_div .cart {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.child_div .cart:hover {
+    background-color: #218838;
+}
+
+.child_div .cart:active {
+    background-color: #1e7e34;
+}
+
+.child_div .delete {
+    background-color: #dc3545;
+    color: white;
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.child_div .delete:hover {
+    background-color: #c82333;
+}
+
+.child_div .delete:active {
+    background-color: #bd2130;
+}
